@@ -1,0 +1,349 @@
+    /* Global Reset */
+    body, ul, li, a {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    body {
+        font-family: 'Roboto', sans-serif;
+        line-height: 1.6;
+    }
+
+    header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 10px 20px;
+        background-color: #0d2b4c;
+        color: white;
+        position: sticky;
+        top: 0;
+        z-index: 1000;
+    }
+
+    header .logo img {
+        max-height: 50px;
+    }
+
+    header nav ul {
+        list-style: none;
+        display: flex;
+        gap: 20px;
+    }
+
+    header nav ul li a {
+        color: white;
+        text-decoration: none;
+        font-weight: bold;
+        transition: color 0.3s ease;
+    }
+
+    header nav ul li a:hover {
+        color: #f1c40f;
+    }
+
+    .menu-toggle {
+        display: none;
+        font-size: 1.5rem;
+        background: none;
+        border: none;
+        color: white;
+        cursor: pointer;
+    }
+
+    /* Section Styling */
+    section {
+        padding: 50px 20px;
+        text-align: center;
+    }
+
+    .home-section {
+        background-color: #f4f4f4;
+    }
+
+    .about-section {
+        background-color: #e9ecef;
+    }
+
+    .portfolio-section {
+        background-color: #f4f4f4;
+    }
+
+    .blog-section {
+        background-color: #e9ecef;
+    }
+
+    .contact-section {
+        background-color: #f4f4f4;
+    }
+
+    /* Section Content */
+    .content {
+        max-width: 800px;
+        margin: 0 auto;
+    }
+
+    .contact-button {
+        display: inline-block;
+        padding: 10px 20px;
+        color: white;
+        background-color: #007bff;
+        border-radius: 5px;
+        text-decoration: none;
+        font-weight: bold;
+        transition: background-color 0.3s ease;
+    }
+
+    .contact-button:hover {
+        background-color: #0056b3;
+    }
+
+    /* Footer Styling */
+    footer {
+        background-color: #0d2b4c;
+        color: white;
+        padding: 10px 0;
+        text-align: center;
+    }
+
+    /* Responsive Design */
+    @media (max-width: 768px) {
+        .menu-toggle {
+            display: block;
+        }
+
+        header nav {
+            display: none;
+            flex-direction: column;
+            background-color: #0d2b4c;
+            position: absolute;
+            top: 100%;
+            right: 0;
+            left: 0;
+            z-index: 1001;
+            text-align: center;
+        }
+
+        header nav.open {
+            display: flex;
+        }
+    }
+
+    /* Home Section Styling */
+    #home {
+        background-color: #f4f4f4;
+        padding: 80px 20px; /* Untuk memberi ruang agar tidak tertutup header */
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .home-container {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        max-width: 1200px;
+        margin: 0 auto;
+        flex-wrap: wrap; /* Agar responsif di layar kecil */
+    }
+
+    .home-text {
+        flex: 1;
+        padding: 20px;
+        text-align: left;
+    }
+
+    .home-text h1 {
+        font-size: 2.5rem;
+        margin: 10px 0;
+        color: #0d2b4c;
+    }
+
+    .home-text .subtitle {
+        font-size: 1.2rem;
+        font-weight: bold;
+        color: #555;
+        margin-bottom: 20px;
+    }
+
+    .home-text p {
+        margin-bottom: 10px;
+        font-size: 1rem;
+        color: #333;
+    }
+
+    .home-image {
+        flex: 1;
+        text-align: center;
+    }
+
+    .home-image img {
+        max-width: 100%;
+        height: auto;
+        border-radius: 50%; /* Membuat gambar menjadi lingkaran */
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    }
+
+    /* Responsiveness */
+    @media (max-width: 768px) {
+        .home-container {
+            flex-direction: column; /* Susun vertikal pada layar kecil */
+            text-align: center;
+        }
+
+        .home-text {
+            text-align: center;
+            padding: 10px;
+        }
+
+        .home-image img {
+            max-width: 200px; /* Ukuran gambar lebih kecil di layar kecil */
+        }
+    }
+
+    /* About Me Section */
+#about {
+    background-color: #e9ecef;
+    padding: 60px 20px;
+}
+
+.about-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    max-width: 1200px;
+    margin: 0 auto;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+.about-description,
+.about-connect {
+    flex: 1;
+    min-width: 300px;
+    padding: 20px;
+    background: #fff;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+}
+
+.about-description h2 {
+    font-size: 2rem;
+    color: #0d2b4c;
+    margin-bottom: 15px;
+}
+
+.about-description p {
+    color: #555;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+.about-button {
+    display: inline-block;
+    padding: 10px 20px;
+    background: #0d2b4c;
+    color: #fff;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+.about-button:hover {
+    background: #007bff;
+}
+
+.about-connect h3 {
+    font-size: 1.5rem;
+    color: #0d2b4c;
+    margin-bottom: 15px;
+}
+
+.about-connect p {
+    color: #555;
+    margin-bottom: 20px;
+}
+
+.social-icons {
+    display: flex;
+    gap: 15px;
+}
+
+.social-icons .icon {
+    font-size: 1.5rem;
+    color: #555;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.social-icons .icon:hover {
+    color: #007bff;
+    transform: scale(1.2);
+}
+
+/* Responsiveness */
+@media (max-width: 768px) {
+    .about-container {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .about-description,
+    .about-connect {
+        text-align: center;
+    }
+}
+
+.portfolio-section {
+    background-color: #f4f4f4;
+    padding: 60px 20px;
+    text-align: center;
+}
+
+.portfolio-container {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.portfolio-item {
+    background: white;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    overflow: hidden;
+    max-width: 400px;
+    text-align: left;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.portfolio-item a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.portfolio-item img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.portfolio-item h3 {
+    font-size: 1.5rem;
+    color: #0d2b4c;
+    margin: 15px 15px 5px;
+}
+
+.portfolio-item p {
+    color: #555;
+    margin: 0 15px 15px;
+    line-height: 1.6;
+}
+
+.portfolio-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
